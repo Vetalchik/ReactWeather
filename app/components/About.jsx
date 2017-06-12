@@ -1,12 +1,14 @@
 var React = require('React');
-var About = React.createClass({
-  render: function () {
-    return(
-      <div>
+
+//stateless function component - тільки метод render(), не обслуговують state
+
+var About = (props) => {
+  return (
+    <div>
         About component
-      </div>
-    );
-  }
-});
+    </div>
+  );
+}
+
 
 module.exports = About;
