@@ -3,7 +3,7 @@ var WeatherMessage = React.createClass({
   render: function () {
     return(
       <div>
-        <p>WeatherMessage component</p>
+        <p>There is {this.props.temp} in {this.props.location}.</p>
       </div>
     );
   }
