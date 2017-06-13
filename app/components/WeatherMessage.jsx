@@ -1,12 +1,9 @@
 var React = require('React');
-var WeatherMessage = React.createClass({
-  render: function () {
+
+var WeatherMessage = ({ temp, location }) => { //destructuring синтаксис в середині параметрів анонімної функції. Об'єкт, що розкладається - це параметр
     return(
-      <div>
-        <p>There is {this.props.temp} in {this.props.location}.</p>
-      </div>
+      <h3 className="text-center">It is { temp } in { location }</h3>
     );
-  }
-});
+}
 
 module.exports = WeatherMessage;

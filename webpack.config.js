@@ -1,5 +1,20 @@
+var webpack = require('webpack');
+
 module.exports = {
-    entry: './app/app.jsx',
+    entry: [
+        'script!jquery/dist/jquery.min.js', //!script для ігнорування файлу лоадером
+        'script!foundation-sites/dist/foundation.min.js',
+        './app/app.jsx',
+    ],
+    externals: { // ключ - ім'я модуля, значення - ім'я змінної, через яку цей модуль буде доступним у наших external script files
+        jquery: 'jQuery', // потрібно для Foundation
+    },
+    plugins: [ //
+        new webpack.ProvidePlugin({ // ключ - ім'я змінної, за якою слідкувати, значення - їм'я модуля, який завантажити і яким цю змінну замінити, якщо вона не оголошена раніше.
+            '$': 'jquery',
+            'jQuery' : 'jqury',
+        }),
+    ],
     output: {
         path: __dirname,
         filename: './public/bundle.js',
@@ -15,6 +30,8 @@ module.exports = {
           About:  'app/components/About.jsx',
           Examples:  'app/components/Examples.jsx',
           openWeatherMap: 'app/api/openWeatherMap.jsx',
+          ErrorModal: 'app/components/ErrorModal.jsx',
+          appStyles: 'app/styles/app.css',
 
         },
         extensions: ['', '.js', '.jsx']

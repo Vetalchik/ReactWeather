@@ -5,7 +5,8 @@ var React = require('React');
 var About = (props) => {
   return (
     <div>
-        About component
+        <h1 className="text-center page-title">About</h1>
+        <p>This is an application, which I am doing to learn React.</p>
     </div>
   );
 }
