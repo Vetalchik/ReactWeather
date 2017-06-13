@@ -9,11 +9,11 @@ var About = require('About');
 var Examples = require('Examples');
 
 // завантажити foundation
-require('style!css!foundation-sites/dist/foundation.min.css'); // css! підказує require, що це css файл; style! - відобразити стилі на сторінці
+require('style!css!foundation-sites/dist/css/foundation.min.css'); // css! підказує require, що це css файл; style! - відобразити стилі на сторінці
 $(document).foundation();
 
 // завантажити css
-require('style!css!appStyles');
+require('style!css!sass!appStyles');
 
 ReactDOM.render(
     <Router history={ hashHistory }>

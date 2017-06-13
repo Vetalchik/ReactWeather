@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: [
         'script!jquery/dist/jquery.min.js', //!script для ігнорування файлу лоадером
-        'script!foundation-sites/dist/foundation.min.js',
+        'script!foundation-sites/dist/js/foundation.min.js',
         './app/app.jsx',
     ],
     externals: { // ключ - ім'я модуля, значення - ім'я змінної, через яку цей модуль буде доступним у наших external script files
@@ -31,7 +31,7 @@ module.exports = {
           Examples:  'app/components/Examples.jsx',
           openWeatherMap: 'app/api/openWeatherMap.jsx',
           ErrorModal: 'app/components/ErrorModal.jsx',
-          appStyles: 'app/styles/app.css',
+          appStyles: 'app/styles/app.scss',
 
         },
         extensions: ['', '.js', '.jsx']
