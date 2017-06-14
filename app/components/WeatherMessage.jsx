@@ -1,4 +1,4 @@
-var React = require('React');
+var React = require('react');
 
 var WeatherMessage = ({ temp, location }) => { //destructuring синтаксис в середині параметрів анонімної функції. Об'єкт, що розкладається - це параметр
     return(

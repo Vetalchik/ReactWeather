@@ -1,4 +1,4 @@
-var React = require('React');
+var React = require('react');
 
 //stateless function component - тільки метод render(), не обслуговують state
 
